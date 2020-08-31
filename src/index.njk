@@ -19,9 +19,7 @@
                     <div class="icon">
                         {{ role.icon }}
                     </div>
-                    <div class="label" {% if circle.color|length %}
-                style="color:{{ circle.color }}"
-            {% endif %}>
+                    <div class="label">
                         {{role.label}}
                     </div>
                 </div>
@@ -44,7 +42,7 @@
                     target
                         .classList
                         .remove('is-fullscreen')
-                    target.style = "background: white"
+                    target.style = "background: black"
                 } else {
                     target
                         .classList
