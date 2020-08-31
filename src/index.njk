@@ -10,17 +10,22 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="white">
     </head>
     <body>
-        {% for role in roles %}
-            <div class="role" {% if role.color|length %}
-                data-color="{{ role.color }}"
+        {% for circle in roles %}
+            {% for role in circle.roles %}
+
+                <div class="role" {% if circle.color|length %}
+                data-color="{{ circle.color }}"
             {% endif %}>
-                <div class="icon">
-                    {{ role.icon }}
+                    <div class="icon">
+                        {{ role.icon }}
+                    </div>
+                    <div class="label" {% if circle.color|length %}
+                style="color:{{ circle.color }}"
+            {% endif %}>
+                        {{role.label}}
+                    </div>
                 </div>
-                <div class="label">
-                    {{role.label}}
-                </div>
-            </div>
+            {% endfor %}
         {% endfor %}
         <script>
 

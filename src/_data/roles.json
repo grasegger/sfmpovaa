@@ -1,44 +1,66 @@
 [
     {
-        "icon": "👀",
-        "label": "person",
-        "color": "pink"
+        "color": "gray",
+        "roles": [
+            {
+                "icon": "👀",
+                "label": "Lorem"
+            }, {
+                "icon": "🏎",
+                "label": "Ipsum"
+            }, {
+                "icon": "🎲",
+                "label": "Baumstamm"
+            }, {
+                "icon": "🎮",
+                "label": "Fischkutter"
+            }, {
+                "icon": "🎰",
+                "label": "Kuchen"
+            }, {
+                "icon": "🎬",
+                "label": "Auto"
+            }, {
+                "icon": "🤹‍♀️",
+                "label": "Arbeiterbiene"
+            }, {
+                "icon": "🎯",
+                "label": "Dingens"
+            }, {
+                "icon": "🚌",
+                "label": "Kreativität"
+            }, {
+                "icon": "🚈",
+                "label": "Flöte"
+            }, {
+                "icon": "🚨",
+                "label": "Espresso"
+            }, {
+                "icon": "🍋",
+                "label": "Computer"
+            },
+            {
+                "icon": "🥝",
+                "label": "Linux"
+            }
+        ]
     },
     {
-        "icon": "👷🏼",
-        "label": "person", 
-        "color": "#483812"
+        "color": "green",
+        "roles": [
+            {
+                "icon": "🧴",
+                "label": "Eimer"
+            }
+        ]
     },
     {
-        "icon": "🙃",
-        "label": "person"
-    },
-    {
-        "icon": "🙃",
-        "label": "person"
-    },
-    {
-        "icon": "🙃",
-        "label": "person"
-    },
-    {
-        "icon": "🙃",
-        "label": "person"
-    },
-    {
-        "icon": "🙃",
-        "label": "person"
-    },
-    {
-        "icon": "🙃",
-        "label": "person"
-    },
-    {
-        "icon": "🙃",
-        "label": "person"
-    },
-    {
-        "icon": "🙃",
-        "label": "person"
+        "color": "blue",
+        "roles": [
+            {
+                "icon": "🧸",
+                "label": "Bach"
+            }
+        ]
     }
 ]
