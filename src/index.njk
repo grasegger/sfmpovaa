@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Role Cards</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="apple-mobile-web-app-title" content="Role Cards">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    </head>
+    <body>
+        {% for role in roles %}
+            <div class="role" {% if role.color|length %}
+                data-color="{{ role.color }}"
+            {% endif %}>
+                <div class="icon">
+                    {{ role.icon }}
+                </div>
+                <div class="label">
+                    {{role.label}}
+                </div>
+            </div>
+        {% endfor %}
+        <script>
+
+            document
+                .querySelectorAll('.role')
+                .forEach(elem => elem.addEventListener("click", toggleIcon));
+
+            function toggleIcon(event) {
+                target = event.target
+
+                if (target.classList.contains('icon') | target.classList.contains('label')) {
+                    target = target.parentElement
+                }
+
+                if (target.classList.contains('is-fullscreen')) {
+                    target
+                        .classList
+                        .remove('is-fullscreen')
+                    target.style = "background: white"
+                } else {
+                    target
+                        .classList
+                        .add('is-fullscreen')
+                    console.log(target.dataset)
+                    target.style = "background: " + target.dataset.color
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "saa",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  },
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": " npx @11ty/eleventy --serve"
+  }
+}
