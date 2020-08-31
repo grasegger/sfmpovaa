@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Role Cards</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="apple-mobile-web-app-title" content="Role Cards">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    </head>
+    <body>
+        
+            <div class="role" 
+                data-color="pink"
+            >
+                <div class="icon">
+                    👀
+                </div>
+                <div class="label">
+                    person
+                </div>
+            </div>
+        
+            <div class="role" 
+                data-color="#483812"
+            >
+                <div class="icon">
+                    👷🏼
+                </div>
+                <div class="label">
+                    person
+                </div>
+            </div>
+        
+            <div class="role" >
+                <div class="icon">
+                    🙃
+                </div>
+                <div class="label">
+                    person
+                </div>
+            </div>
+        
+            <div class="role" >
+                <div class="icon">
+                    🙃
+                </div>
+                <div class="label">
+                    person
+                </div>
+            </div>
+        
+            <div class="role" >
+                <div class="icon">
+                    🙃
+                </div>
+                <div class="label">
+                    person
+                </div>
+            </div>
+        
+            <div class="role" >
+                <div class="icon">
+                    🙃
+                </div>
+                <div class="label">
+                    person
+                </div>
+            </div>
+        
+            <div class="role" >
+                <div class="icon">
+                    🙃
+                </div>
+                <div class="label">
+                    person
+                </div>
+            </div>
+        
+            <div class="role" >
+                <div class="icon">
+                    🙃
+                </div>
+                <div class="label">
+                    person
+                </div>
+            </div>
+        
+            <div class="role" >
+                <div class="icon">
+                    🙃
+                </div>
+                <div class="label">
+                    person
+                </div>
+            </div>
+        
+            <div class="role" >
+                <div class="icon">
+                    🙃
+                </div>
+                <div class="label">
+                    person
+                </div>
+            </div>
+        
+        <script>
+
+            document
+                .querySelectorAll('.role')
+                .forEach(elem => elem.addEventListener("click", toggleIcon));
+
+            function toggleIcon(event) {
+                target = event.target
+
+                if (target.classList.contains('icon') | target.classList.contains('label')) {
+                    target = target.parentElement
+                }
+
+                if (target.classList.contains('is-fullscreen')) {
+                    target
+                        .classList
+                        .remove('is-fullscreen')
+                    target.style = "background: white"
+                } else {
+                    target
+                        .classList
+                        .add('is-fullscreen')
+                    console.log(target.dataset)
+                    target.style = "background: " + target.dataset.color
+                }
+            }
+        </script>
+    </body>
+</html>
